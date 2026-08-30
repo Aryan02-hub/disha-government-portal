@@ -1,0 +1,2 @@
+const mongoose=require('mongoose');
+module.exports=mongoose.model('FollowUp',new mongoose.Schema({traineeId:String,traineeName:String,type:{type:String,default:'Outcome follow-up'},stage:{type:String,default:'Post-training'},dueDate:String,owner:String,status:{type:String,enum:['pending','completed','overdue'],default:'pending'},channel:{type:String,default:'phone'},response:String,notes:String,notificationStatus:{type:String,default:'not_sent'},notificationSid:String,lastNotificationAt:Date,createdAt:{type:Date,default:Date.now}}));

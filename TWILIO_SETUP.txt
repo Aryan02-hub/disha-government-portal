@@ -1,0 +1,21 @@
+DISHA TWILIO SETUP
+==================
+1. Open .env in the same folder as server.js.
+2. Replace ONLY these placeholders with values from your Twilio Console:
+   TWILIO_ACCOUNT_SID
+   TWILIO_AUTH_TOKEN
+   TWILIO_PHONE_NUMBER
+3. Do not put Client Secret in TWILIO_AUTH_TOKEN.
+4. Restart server: Ctrl+C then npm start
+5. Login as Admin or Provider and open Trainee Records -> Notify.
+6. SMS works only if the sender number and recipient are allowed by your Twilio account/trial rules.
+7. WhatsApp Sandbox requires the recipient to join the Sandbox first.
+
+Expected startup diagnostics:
+[Twilio] Account SID: FOUND
+[Twilio] Auth Token: FOUND
+[Twilio] SMS Sender: FOUND
+[Twilio] Client: READY
+
+
+If Twilio shows: "Trial accounts can only use predefined SMS templates", create/select a Twilio Content Template and copy its HX... Content SID into TWILIO_SMS_CONTENT_SID, then restart the server.
