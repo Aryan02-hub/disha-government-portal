@@ -1,0 +1,2 @@
+const mongoose=require('mongoose');
+module.exports=mongoose.model('Verification',new mongoose.Schema({traineeId:String,traineeName:String,employer:String,employerId:String,claimType:{type:String,default:'employment'},claimedWage:Number,status:{type:String,enum:['pending','verified','disputed'],default:'pending'},employerResponse:String,verifiedWage:Number,verifiedBy:String,requestedAt:{type:Date,default:Date.now},respondedAt:Date}));
